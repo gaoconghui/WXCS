@@ -1,6 +1,6 @@
 package com.whut.wxcs.resmanager.bean;
 
-public class Resource_Attribute {
+public class ResourceAttribute {
 
 	private long resourceId;
 	private long attributeId;
