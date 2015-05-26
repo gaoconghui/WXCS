@@ -1,8 +1,12 @@
 package com.whut.wxcs.resmanager.bean;
 
 import java.sql.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Provider {
+
+	private Set<Resource> resources = new HashSet<Resource>();
 
 	private long id;
 	private String name;
@@ -24,6 +28,15 @@ public class Provider {
 	private String certificationType;
 	private String loginName;
 	private String loginPwd;
+
+	public void addResource(Resource resource) {
+		resources.add(resource);
+	}
+
+	public void removeResource(Resource resource) {
+		if (resources.contains(resource))
+			resources.remove(resource);
+	}
 
 	public long getId() {
 		return id;

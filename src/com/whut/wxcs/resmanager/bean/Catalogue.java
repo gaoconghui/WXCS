@@ -1,12 +1,33 @@
 package com.whut.wxcs.resmanager.bean;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Catalogue {
 
 	private String id;
-	private String parentId;
+	private Catalogue parent;
+	private Set<Catalogue> child = new HashSet<Catalogue>();
 	private String name;
 	private String description;
-	private boolean isLeaf;
+	private Template template;
+
+	public Template getTemplate() {
+		return template;
+	}
+
+	public void setTemplate(Template template) {
+		this.template = template;
+	}
+
+	public void addChild(Catalogue catalogue) {
+		child.add(catalogue);
+	}
+
+	public void removeChile(Catalogue catalogue) {
+		if (child.contains(catalogue))
+			child.remove(catalogue);
+	}
 
 	public String getId() {
 		return id;
@@ -16,16 +37,16 @@ public class Catalogue {
 		this.id = id;
 	}
 
-	public String getParentId() {
-		return parentId;
-	}
-
-	public void setParentId(String parentId) {
-		this.parentId = parentId;
-	}
-
 	public String getName() {
 		return name;
+	}
+
+	public Catalogue getParent() {
+		return parent;
+	}
+
+	public void setParent(Catalogue parent) {
+		this.parent = parent;
 	}
 
 	public void setName(String name) {
@@ -40,18 +61,12 @@ public class Catalogue {
 		this.description = description;
 	}
 
-	public void setLeaf(boolean isLeaf) {
-		this.isLeaf = isLeaf;
-	}
-
-	public boolean isLeaf() {
-		return isLeaf;
-	}
-
 	@Override
 	public String toString() {
-		return "Catalogue [id=" + id + ", parentId=" + parentId + ", name="
-				+ name + ", description=" + description + "]";
+		return "Catalogue [id=" + id + ", parent=" + parent + ", child="
+				+ child + ", name=" + name + ", description=" + description
+				+ ", template=" + template + "]";
 	}
+
 
 }
