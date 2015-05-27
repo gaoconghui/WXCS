@@ -2,9 +2,20 @@ package com.whut.wxcs.resmanager.bean;
 
 public class TAttributeValue {
 
+	private long tAttributeValueId;
 	private Template template;
 	private TemplateAttribute attribute;
 	private String attributeValue;
+
+	
+	
+	public long gettAttributeValueId() {
+		return tAttributeValueId;
+	}
+
+	public void settAttributeValueId(long tAttributeValueId) {
+		this.tAttributeValueId = tAttributeValueId;
+	}
 
 	public String getAttributeValue() {
 		return attributeValue;

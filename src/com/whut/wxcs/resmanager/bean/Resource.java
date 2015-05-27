@@ -18,9 +18,9 @@ public class Resource {
 	private Date creat_time;
 	private Float rating;
 	// 权限
-	private int right;
+	private int power;
 	// 拥有相同的资源的数目
-	private int amount;
+	private int quantity;
 
 	public void addAttribute(RAttributeValue attribute) {
 		attributes.add(attribute);
@@ -87,20 +87,30 @@ public class Resource {
 		this.rating = rating;
 	}
 
-	public int getRight() {
-		return right;
+
+	public int getPower() {
+		return power;
 	}
 
-	public void setRight(int right) {
-		this.right = right;
+	public void setPower(int power) {
+		this.power = power;
 	}
 
-	public int getAmount() {
-		return amount;
+	public Set<RAttributeValue> getAttributes() {
+		return attributes;
 	}
 
-	public void setAmount(int amount) {
-		this.amount = amount;
+	public void setAttributes(Set<RAttributeValue> attributes) {
+		this.attributes = attributes;
 	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
 
 }

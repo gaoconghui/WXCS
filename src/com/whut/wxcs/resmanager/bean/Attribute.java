@@ -8,6 +8,8 @@ public class Attribute {
 
 	private byte attribute_type;
 	private String attribute_description;
+	
+	
 	public long getId() {
 		return id;
 	}

@@ -2,9 +2,19 @@ package com.whut.wxcs.resmanager.bean;
 
 public class RAttributeValue {
 
+	private long RAttributeValueId;
 	private Resource resource;
 	private Attribute attribute;
 	private String attributeValue;
+
+	
+	public long getRAttributeValueId() {
+		return RAttributeValueId;
+	}
+
+	public void setRAttributeValueId(long rAttributeValueId) {
+		RAttributeValueId = rAttributeValueId;
+	}
 
 	public String getAttributeValue() {
 		return attributeValue;
