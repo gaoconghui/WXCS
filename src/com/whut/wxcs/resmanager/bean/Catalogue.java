@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Catalogue {
 
-	private String id;
+	private long id;
 	private Catalogue parent;
 	private Set<Catalogue> child = new HashSet<Catalogue>();
 	private String name;
@@ -29,11 +29,11 @@ public class Catalogue {
 			child.remove(catalogue);
 	}
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

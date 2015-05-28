@@ -4,7 +4,7 @@
 <!-- Generated 2015-5-27 16:22:44 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
 	<class name="com.whut.wxcs.resmanager.bean.Catalogue" table="CATALOGUE">
-		<id name="id" type="java.lang.String">
+		<id name="id" type="long">
 			<column name="CATALOGUE_ID" />
 			<generator class="native" />
 		</id>
@@ -15,7 +15,7 @@
 		<set name="child" table="CATALOGUE" inverse="false" lazy="true"
 			access="field">
 			<key>
-				<column name="CHILD_ID" />
+				<column name="PARENT_ID" />
 			</key>
 			<one-to-many class="com.whut.wxcs.resmanager.bean.Catalogue" />
 		</set>
@@ -25,6 +25,7 @@
 		<property name="description" type="java.lang.String">
 			<column name="DESCRIPTION" />
 		</property>
+
 
 		<one-to-one name="template" class="com.whut.wxcs.resmanager.bean.Template"
 			property-ref="catalogue"></one-to-one>

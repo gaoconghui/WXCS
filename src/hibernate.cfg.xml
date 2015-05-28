@@ -45,14 +45,14 @@
 
 		<!-- 设定对数据库进行批量删除，批量更新和批量插入的时候的批次大小 -->
 		<property name="jdbc.batch_size">30</property>
-		<mapping resource="com/whut/wxcs/resmanager/bean/Resource.hbm.xml" />
+		<mapping resource="com/whut/wxcs/resmanager/bean/Catalogue.hbm.xml" />
+		<mapping resource="com/whut/wxcs/resmanager/bean/Template.hbm.xml" />
 
+		<mapping resource="com/whut/wxcs/resmanager/bean/Resource.hbm.xml" />
 		<mapping resource="com/whut/wxcs/resmanager/bean/Attribute.hbm.xml" />
 		<mapping resource="com/whut/wxcs/resmanager/bean/RAttributeValue.hbm.xml" />
-		<mapping resource="com/whut/wxcs/resmanager/bean/Catalogue.hbm.xml" />
 		<mapping resource="com/whut/wxcs/resmanager/bean/Provider.hbm.xml" />
 		<mapping resource="com/whut/wxcs/resmanager/bean/TAttributeValue.hbm.xml" />
-		<mapping resource="com/whut/wxcs/resmanager/bean/Template.hbm.xml" />
 		<mapping resource="com/whut/wxcs/resmanager/bean/TemplateAttribute.hbm.xml" />
 		<mapping resource="com/whut/wxcs/resmanager/bean/User.hbm.xml" />
 

@@ -16,19 +16,16 @@
 		</property>
 
 		<many-to-one name="catalogue"
-			class="com.whut.wxcs.resmanager.bean.Catalogue" unique="true">
-			<column name="CATALOGUE_ID"></column>
+			class="com.whut.wxcs.resmanager.bean.Catalogue">
+			<column name="CATALOGUE_ID" unique="true"></column>
 		</many-to-one>
+
 
 		<property name="creatTime" type="java.util.Date">
 			<column name="CREATTIME" />
 		</property>
-		<set name="attributes" table="TATTRIBUTEVALUE" inverse="false"
-			lazy="true" access="field">
-			<key>
-				<column name="TEMPLATE_ID" />
-			</key>
-			<one-to-many class="com.whut.wxcs.resmanager.bean.TAttributeValue" />
-		</set>
+		 <set name="attributes" table="TATTRIBUTEVALUE" inverse="false" lazy="true" 
+			access="field"> <key> <column name="TEMPLATE_ID" /> </key> <one-to-many class="com.whut.wxcs.resmanager.bean.TAttributeValue" 
+			/> </set> 
 	</class>
 </hibernate-mapping>

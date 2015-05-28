@@ -18,6 +18,7 @@
 			class="com.whut.wxcs.resmanager.bean.Attribute" fetch="join">
 			<column name="ATTRIBUTE_ID" />
 		</many-to-one>
+		
 		<property name="attributeValue" type="java.lang.String">
 			<column name="ATTRIBUTEVALUE" />
 		</property>

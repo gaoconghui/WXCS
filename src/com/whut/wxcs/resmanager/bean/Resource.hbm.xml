@@ -11,10 +11,11 @@
 		<set name="attributes" table="RATTRIBUTEVALUE" inverse="false"
 			lazy="true" access="field">
 			<key>
-				<column name="RATTRIBUTEVALUE_ID" />
+				<column name="RESOURCE_ID" />
 			</key>
 			<one-to-many class="com.whut.wxcs.resmanager.bean.RAttributeValue" />
 		</set>
+		
 		<many-to-one name="catalogue"
 			class="com.whut.wxcs.resmanager.bean.Catalogue" fetch="join">
 			<column name="CATALOGUE_ID" />
